@@ -10,6 +10,9 @@ class Indumento {
   function __construct($id) {
     $this->id = $id;
   }
+  public function get_value($value) {
+    return $this->$value;
+  }
   public function set_value($key, $value) {
     $this->$key = $value;
   }
