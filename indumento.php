@@ -1,15 +1,24 @@
 <?php
 class Indumento {
-  protected $id;
-  protected $marca;
-  protected $colore;
-  protected $materiale;
-  protected $provenienza;
+  public $id;
+  public $marca;
+  public $colore;
+  public $tessuto;
+  public $provenienza;
   protected $taglia;
 
   function __construct($id) {
     $this->id = $id;
   }
+  public function set_value($key, $value) {
+    $this->$key = $value;
+  }
+
+}
+
+trait Prezzo
+{
+  protected $prezzo;
 }
 
 $tshirt = new Indumento(3);

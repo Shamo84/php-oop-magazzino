@@ -2,6 +2,8 @@
 
 class Maglietta extends Indumento
 {
+  use Prezzo;
+
   protected $collo;
   protected $manica;
   public $costo_stampe;
@@ -17,5 +19,3 @@ var_dump($pyrex);
 $pyrex->costo_stampe = 1;
 $costo = $pyrex->CostoPerStampa(4);
 echo $costo;
-
-?>
